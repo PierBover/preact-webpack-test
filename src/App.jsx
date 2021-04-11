@@ -7,14 +7,17 @@ export default class App extends Component {
 
 	constructor() {
 		super();
+
 		this.state = {
 			showSpinner: true,
-			path: window.location.pathname
+			path: null
 		};
 	}
 
 	componentDidMount() {
 		console.log('mounted!');
+		this.navigate(window.location.pathname);
+
 		setTimeout(() => {
 			this.setState({showSpinner: false});
 		}, 1000);
