@@ -22,5 +22,8 @@ module.exports = {
 	devServer: {
 		publicPath: "/",
 		contentBase: "./public",
+		historyApiFallback: {
+			index: 'index.html'
+		}
 	}
 };
